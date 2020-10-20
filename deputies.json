@@ -1,0 +1,428 @@
+{
+    "deputies": [
+   
+        {
+            "zone": "Wallonie picarde",
+            "name": "Fatima Ahallouch",
+            "role": "Sénatrice Vice-présidente de la commission de la fonction publique, du tourisme et du patrimoine",
+            "party": "PS"
+        },
+        {
+            "zone": "Charleroi",
+            "name": "Maxime Hardy (depuis le 08/01/2020)",
+            "replaced": "Philippe Blanchart",
+            "party": "PS"
+        },
+        {
+            "zone": "Huy-Waremme",
+            "name": "Christophe Collignon",
+            "party": "PS"
+        },
+        {
+            "zone": "Luxembourg",
+            "name": "Philippe Courard",
+            "role": "Président de la Commission du logement et des pouvoirs locaux",
+            "party": "PS"
+        },
+        {
+            "zone": "Wallonie picarde",
+            "name": "Rudy Demotte",
+            "party": "PS"
+        },
+        {
+            "zone": "Soignies",
+            "name": "Laurent Devin",
+            "party": "PS"
+        },
+        {
+            "zone": "Soignies",
+            "name": "Michele DiMattia",
+            "party": "PS"
+        },
+        {
+            "zone": "Dinant",
+            "name": "Eddy Fontaine (depuis le 16/09/2019)",
+            "replaced": "Pierre-Yves Dermagne2",
+            "role": "Vice-président de la commission de l'économie, de l'aménagement du territoire et de l'agriculture Commission des Poursuites",
+            "party": "PS"
+        },
+        {
+            "zone": "Verviers",
+            "name": "André Frédéric",
+            "role": "Chef de groupe PS Commission des Poursuites",
+            "party": "PS"
+        },
+        {
+            "zone": "Charleroi",
+            "name": "Paul Furlan",
+            "role": "Vice-président de la commission du budget et des infrastructures sportives",
+            "party": "PS"
+        },
+        {
+            "zone": "Charleroi",
+            "name": "Latifa Gahouchi",
+            "party": "PS"
+        },
+        {
+            "zone": "Namur",
+            "name": "Gwenaëlle Grovonius",
+            "party": "PS"
+        },
+        {
+            "zone": "Mons",
+            "name": "Joëlle Kapompole",
+            "party": "PS"
+        },
+        {
+            "zone": "Nivelles",
+            "name": "Dimitri Legasse",
+            "role": "Président de la commission de l'emploi, de l'action sociale et de la santé",
+            "party": "PS"
+        },
+        {
+            "zone": "Liège",
+            "name": "Mauro Lenzini",
+            "party": "PS"
+        },
+        {
+            "zone": "Liège",
+            "name": "Laurent Léonard (depuis le 16/09/2019)",
+            "replaced": "Christie Morreale",
+            "role": "SénateurCommission des Poursuites\nVice-président de la commission de l'énergie, du climat et de la mobilité",
+            "party": "PS"
+        },
+        {
+            "zone": "Mons",
+            "name": "Jean-Pierre Lepine",
+            "role": "Président de la commission de l'environnement, de la nature et du bien-être animal",
+            "party": "PS"
+        },
+        {
+            "zone": "Namur",
+            "name": "Jean-Charles Luperto",
+            "role": "Vice-président de la commission des affaires générales et des relations internationales",
+            "party": "PS"
+        },
+        {
+            "zone": "Liège",
+            "name": "Jean-Claude Marcourt",
+            "role": "Président du Parlement",
+            "party": "PS"
+        },
+        {
+            "zone": "Soignies",
+            "name": "Sophie Pécriaux",
+            "role": "Secrétaire du Parlement",
+            "party": "PS"
+        },
+        {
+            "zone": "Liège",
+            "name": "Sabine Roberty",
+            "party": "PS"
+        },
+        {
+            "zone": "Charleroi",
+            "name": "Mourad Sahli",
+            "party": "PS"
+        },
+        {
+            "zone": "Liège",
+            "name": "Thierry Witsel",
+            "party": "PS"
+        },
+        {
+            "zone": "Dinant",
+            "name": "Frédérick Botin",
+            "replaced": "François Bellot",
+            "party": "MR"
+        },
+        {
+            "zone": "Huy-Waremme",
+            "name": "Caroline CassartMailleux",
+            "party": "MR"
+        },
+        {
+            "zone": "Wallonie picarde",
+            "name": "Hervé Cornillie (depuis le 16/09/2019)",
+            "replaced": "Jean-Luc Crucke",
+            "party": "MR"
+        },
+        {
+            "zone": "Nivelles",
+            "name": "Sybille deCosterBauchau",
+            "party": "MR"
+        },
+        {
+            "zone": "Liège",
+            "name": "Philippe Dodrimont",
+            "role": "Sénateur",
+            "party": "MR"
+        },
+        {
+            "zone": "Huy-Waremme",
+            "name": "Manu Douette",
+            "party": "MR"
+        },
+        {
+            "zone": "Wallonie picarde",
+            "name": "Véronique Durenne",
+            "replaced": "Alice Leeuwerck",
+            "role": "Sénateur",
+            "party": "MR"
+        },
+        {
+            "zone": "Luxembourg",
+            "name": "Yves Evrard (depuis le 16/09/2019)",
+            "replaced": "Willy Borsus",
+            "role": "Vice-Président de la Commission du logement et des pouvoirs locaux",
+            "party": "MR"
+        },
+        {
+            "zone": "Mons",
+            "name": "Jacqueline Galant",
+            "role": "Vice-Présidente du Parlement Vice-présidente de la commission des affaires générales et des relations internationales",
+            "party": "MR"
+        },
+        {
+            "zone": "Verviers",
+            "name": "Charles Gardier (depuis le 18/09/2019)",
+            "replaced": "Pierre-Yves Jeholet",
+            "role": "Président de la commission des affaires générales et des relations internationales",
+            "party": "MR"
+        },
+        {
+            "zone": "Nivelles",
+            "name": "Nicolas Janssen (depuis le 16/09/2019)",
+            "replaced": "Valérie De Bue",
+            "role": "Vice-président de la commission de l'environnement, de la nature et du bien-être animal",
+            "party": "MR"
+        },
+        {
+            "zone": "Luxembourg",
+            "name": "Anne Laffut",
+            "party": "MR"
+        },
+        {
+            "zone": "Namur",
+            "name": "Sabine Laruelle",
+            "role": "Sénatrice",
+            "party": "MR"
+        },
+        {
+            "zone": "Nivelles",
+            "name": "Olivier Maroy",
+            "role": "Président de la commission de la fonction publique, du tourisme et du patrimoine",
+            "party": "MR"
+        },
+        {
+            "zone": "Dinant",
+            "name": "Françoise Mathieux",
+            "party": "MR"
+        },
+        {
+            "zone": "Verviers",
+            "name": "Christine Mauel",
+            "role": "Vice-présidente de la commission du budget et des infrastructures sportives",
+            "party": "MR"
+        },
+        {
+            "zone": "Liège",
+            "name": "Diana Nikolic",
+            "role": "Vice-présidente de la commission de l'énergie, du climat et de la mobilité fCommission des Poursuites",
+            "party": "MR"
+        },
+        {
+            "zone": "Charleroi",
+            "name": "Rachel Sobry",
+            "party": "MR"
+        },
+        {
+            "zone": "Charleroi",
+            "name": "Nicolas Tzanetatos",
+            "role": "Commission des Poursuites",
+            "party": "MR"
+        },
+        {
+            "zone": "Nivelles",
+            "name": "Jean-Paul Wahl",
+            "role": "Chef de groupe MR Secrétaire du Parlement\nSénateur\nCommission des Poursuites",
+            "party": "MR"
+        },
+        {
+            "zone": "Wallonie picarde",
+            "name": "Laurent Agache (depuis le 18/09/2019)",
+            "replaced": "Bénédicte Linard",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Liège",
+            "name": "Olivier Bierin",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Charleroi",
+            "name": "Christophe Clersy",
+            "role": "Vice-président de la commission de l'environnement, de la nature et du bien-être animal",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Liège",
+            "name": "Veronica Cremasco",
+            "role": "Présidente de la commission de l'économie, de l'aménagement du territoire et de l'agriculture",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Namur",
+            "name": "Valérie Delporte",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Huy-Waremme",
+            "name": "Rodrigue Demeuse",
+            "role": "SénateurCommission des Poursuites",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Mons",
+            "name": "Emmanuel Disabato",
+            "role": "Vice-Président du Parlement Vice-Président de la commission de l'emploi, de l'action sociale et de la santé",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Luxembourg",
+            "name": "Jean-Philippe Florent",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Namur",
+            "name": "Stéphane Hazée",
+            "role": "Chef de groupe Ecolo",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Nivelles",
+            "name": "Laurent Heyvaert",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Verviers",
+            "name": "Anne Kelleter",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Nivelles",
+            "name": "Hélène Ryckmans",
+            "role": "Sénatrice",
+            "party": "Ecolo"
+        },
+        {
+            "zone": "Liège",
+            "name": "Alice Bernard",
+            "party": "PTB"
+        },
+        {
+            "zone": "Mons",
+            "name": "John Beugnies",
+            "role": "Vice-président de la commission de l'énergie, du climat et de la mobilitéCommission des Poursuites",
+            "party": "PTB"
+        },
+        {
+            "zone": "Wallonie picarde",
+            "name": "Jori Dupont",
+            "party": "PTB"
+        },
+        {
+            "zone": "Soignies",
+            "name": "Antoine Hermant",
+            "role": "SénateurPrésident de la Commission de l'énergie, du climat et de la mobilité\nVice-Président de la commission de l'emploi, de l'action sociale et de la santé",
+            "party": "PTB"
+        },
+        {
+            "zone": "Liège",
+            "name": "Laure Lekane",
+            "role": "Sénatrice",
+            "party": "PTB"
+        },
+        {
+            "zone": "Liège",
+            "name": "Julien Liradelfo",
+            "party": "PTB"
+        },
+        {
+            "zone": "Charleroi",
+            "name": "Germain Mugemangango",
+            "role": "Chef de groupe PTB",
+            "party": "PTB"
+        },
+        {
+            "zone": "Verviers",
+            "name": "Samuel Nemes",
+            "role": "Sénateur",
+            "party": "PTB"
+        },
+        {
+            "zone": "Charleroi",
+            "name": "Amandine Pavet",
+            "party": "PTB"
+        },
+        {
+            "zone": "Namur",
+            "name": "Anouk Vandevoorde",
+            "party": "PTB"
+        },
+        {
+            "zone": "Nivelles",
+            "name": "André Antoine",
+            "role": "Sénateur",
+            "party": "CDH"
+        },
+        {
+            "zone": "Dinant",
+            "name": "Christophe Bastin",
+            "party": "CDH"
+        },
+        {
+            "zone": "Luxembourg",
+            "name": "René Collin",
+            "role": "Président de la commission du budget et des infrastructures sportives",
+            "party": "CDH"
+        },
+        {
+            "zone": "Soignies",
+            "name": "François Desquesnes",
+            "role": "Chef de groupe cdHCommission des Poursuites",
+            "party": "CDH"
+        },
+        {
+            "zone": "Namur",
+            "name": "Benoît Dispa",
+            "party": "CDH"
+        },
+        {
+            "zone": "Luxembourg",
+            "name": "Anne-Catherine Goffinet",
+            "role": "Sénatrice Vice-présidente de la commission de la fonction publique, du tourisme et du patrimoine",
+            "party": "CDH"
+        },
+        {
+            "zone": "Liège",
+            "name": "Alda Greoli",
+            "party": "CDH"
+        },
+        {
+            "zone": "Charleroi",
+            "name": "Julien Matagne",
+            "party": "CDH"
+        },
+        {
+            "zone": "Verviers",
+            "name": "Marie-Martine Schyns",
+            "role": "Vice-présidente de la commission de l'économie, de l'aménagement du territoire et de l'agriculture",
+            "party": "CDH"
+        },
+        {
+            "zone": "Wallonie picard",
+            "name": "Mathilde Vandorpe",
+            "party": "CDH"
+        }
+    ]}
