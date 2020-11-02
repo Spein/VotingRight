@@ -2,55 +2,71 @@ let pdfParsed = new Promise((resolve, reject) => {
 
     const fs = require('fs')
     const pdfParse = require('pdf-parse')
-    const pdfFile = fs.readFileSync("./cri2.pdf")
+    const pdfFile = fs.readFileSync("./cri29.pdf")
 
     pdfParse(pdfFile).then(data => {
-        return data.text.split(/(?=PROPOSITION DE)/)
+    let laws = {
+        date:null,
+        content:null
+    }
+        let date = data.text.slice(data.text.indexOf("Séance plénière*")+16,data.text.indexOf("*Application de l")).replace(/[\n\t\r\.\-]/g, "")
+        laws.date=date
+        laws.content=data.text.split(/(?=PROPOSITION DE)/)
+        return laws
     })
     .then(data => {
-        let postData = []
-        data.forEach((element, index) => {
+        let laws = {
+            date:data.date,
+            content:[]
+        }
+        
+        data.content.forEach((element, index) => {
+
+
             if (element.indexOf('PROJETS DE') > -1) {
                 let postData2 = element.split(/(?=PROJETS DE)/)
                 postData2.forEach((el, index) => {
                     if (el.indexOf('PROJET DE') > -1) {
                         postData4 = el.split(/(?=PROJET DE)/)
                         postData4.forEach((element, index) => {
-                            postData.push(element)
+                            laws.content.push(element)
                         })
                     }
                     else {
-                        postData.push(el) 
+                        laws.content.push(el) 
                         }})
             }
             else if (element.indexOf("PROJET DE") > -1) {
                 let postData3 = element.split(/(?=PROJET DE)/)
                 postData3.forEach((el, index) => {
-                    postData.push(el.split(/(?=PROJET DE)/))
+                    laws.content.push(el.split(/(?=PROJET DE)/))
                 })
             }
-            else postData.push(element)
+            else laws.content.push(element)
         })
-        return postData
+        return laws
 
     })
     .then(data => {
-        let refinedData = []
+        let laws = {
+            date:data.date,
+            content:[]
+        }
         let tostrEl
-        data.forEach((element, index) => {
+        data.content.forEach((element, index) => {
             if (Array.isArray(element)) {
                 tostrEl = element.toString()
-                refinedData.push(tostrEl)
+                laws.content.push(tostrEl)
             } else {
-                refinedData.push(element)
+                laws.content.push(element)
             }
         })
-        return refinedData
+        return laws
     })
     .then(data => {
             let laws = []
             let law
-            data.forEach((element, index) => {
+            data.content.forEach((element, index) => {
                 let pos = element.indexOf('sera soumis à la sanction du Gouvernement')
                 if (pos == -1) pos = element.indexOf('sera donné connaissance au Gouvernement');
                 if (pos == -1) pos = 0;
@@ -100,9 +116,11 @@ let pdfParsed = new Promise((resolve, reject) => {
                         sanction = "unknown"
                     }
                     lawObj = {
+                        date:data.date,
                         title: title,
                         participants: participantsArr,
-                        sanction: sanction
+                        sanction: sanction,
+                        text:law
                     }
                     laws.push(lawObj)
 

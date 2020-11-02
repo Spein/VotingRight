@@ -3,8 +3,12 @@ const mongoose = require ('mongoose')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require ('cors')
-const pdfParsed = require ('./test.js')
 const attachedDeputy = require ('./attachDeputy.js')
+// Firebase App (the core Firebase SDK) is always required and
+// must be listed before other Firebase SDKs
+
+// Add the Firebase products that you want to use
+
 
 require('dotenv/config')
 const uri = process.env.DB_CONNECTION;
@@ -13,7 +17,10 @@ app.use(cors())
 app.use(bodyParser.json())
 //Import Routes
 const postsRoute = require ('./routes/posts')
+const LawsRoute = require ('./routes/laws')
+
 app.use('/posts',postsRoute)
+app.use('/laws',LawsRoute)
 
 
 //Routes

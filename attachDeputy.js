@@ -1,4 +1,4 @@
-const pdfParsed = require ('./test.js')
+const pdfParsed = require ('./parseLaws.js')
 'use strict';
 
 const fs = require('fs');
@@ -85,6 +85,7 @@ let Deputies = new Promise((resolve, reject) => {
         })
         return laws
     }).then(data=>{
+        console.log(data)
         resolve(data)
     })
   

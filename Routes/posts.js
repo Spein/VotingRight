@@ -1,8 +1,6 @@
 const express = require ('express')
 
 const router = express.Router()
-let pdfFile=('../cri29.pdf')
-const test = require ('../test.js')
 
 const Post = require('../models/Post')
 
