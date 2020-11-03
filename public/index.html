@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="img-wrapper"></div>
+    </div>
+    <label for="date">Date</label>
+
+    <input type="text" id="date" name="date" required minlength="4" maxlength="8" size="10">
+    <button onClick="getPleniary();">Submit</button>
+
+    <div class="multi-graph margin">
+        JavaScript
+        <div class="graph" data-name="jQuery" style="--percentage : 80; --fill: #0669AD ;">
+        </div>
+        <div class="graph" data-name="Angular" style="--percentage : 60; --fill: #E62A39 ;">
+        </div>
+        <div class="graph" data-name="React" style="--percentage : 30; --fill: #FEDA3E ;">
+        </div>
+    </div>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
