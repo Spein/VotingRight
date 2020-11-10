@@ -5,65 +5,80 @@ let pdfParsed = new Promise((resolve, reject) => {
     const pdfFile = fs.readFileSync("./cri29.pdf")
 
     pdfParse(pdfFile).then(data => {
-    let laws = {
-        date:null,
-        content:null
-    }
-        let date = data.text.slice(data.text.indexOf("Séance plénière*")+16,data.text.indexOf("*Application de l")).replace(/[\n\t\r\.\-]/g, "")
-        laws.date=date
-        laws.content=data.text.split(/(?=PROPOSITION DE)/)
-        return laws
-    })
-    .then(data => {
-        let laws = {
-            date:data.date,
-            content:[]
-        }
-        
-        data.content.forEach((element, index) => {
-
-
-            if (element.indexOf('PROJETS DE') > -1) {
-                let postData2 = element.split(/(?=PROJETS DE)/)
-                postData2.forEach((el, index) => {
-                    if (el.indexOf('PROJET DE') > -1) {
-                        postData4 = el.split(/(?=PROJET DE)/)
-                        postData4.forEach((element, index) => {
-                            laws.content.push(element)
-                        })
-                    }
-                    else {
-                        laws.content.push(el) 
-                        }})
+            let laws = {
+                date: null,
+                content: null
             }
-            else if (element.indexOf("PROJET DE") > -1) {
-                let postData3 = element.split(/(?=PROJET DE)/)
-                postData3.forEach((el, index) => {
-                    laws.content.push(el.split(/(?=PROJET DE)/))
-                })
+            let rawDate = data.text.slice(data.text.indexOf("Séance plénière*") + 16, data.text.indexOf("*Application de l")).replace(/[\n\t\r\.\-]/g, "")
+            const frToEn = {
+                "janvier": "january",
+                "février": "february",
+                "mars": "march",
+                "avril": "april",
+                "mai": "may",
+                "juin": "june",
+                "juillet": "july",
+                "août": "august",
+                "septembre": "september",
+                "octobre": "october",
+                "novembre": "november",
+                "décembre": "december"
             }
-            else laws.content.push(element)
+            let parsedDate = rawDate.split(' ')[1].replace('er', '') + ' ' + frToEn[rawDate.split(' ')[2].toLowerCase()] + " " + rawDate.split(' ')[3]
+            let date = new Date(parsedDate).toString()
+
+            laws.date = date
+            laws.content = data.text.split(/(?=PROPOSITION DE)/)
+            return laws
         })
-        return laws
-
-    })
-    .then(data => {
-        let laws = {
-            date:data.date,
-            content:[]
-        }
-        let tostrEl
-        data.content.forEach((element, index) => {
-            if (Array.isArray(element)) {
-                tostrEl = element.toString()
-                laws.content.push(tostrEl)
-            } else {
-                laws.content.push(element)
+        .then(data => {
+            let laws = {
+                date: data.date,
+                content: []
             }
+
+            data.content.forEach((element, index) => {
+
+
+                if (element.indexOf('PROJETS DE') > -1) {
+                    let postData2 = element.split(/(?=PROJETS DE)/)
+                    postData2.forEach((el, index) => {
+                        if (el.indexOf('PROJET DE') > -1) {
+                            postData4 = el.split(/(?=PROJET DE)/)
+                            postData4.forEach((element, index) => {
+                                laws.content.push(element)
+                            })
+                        } else {
+                            laws.content.push(el)
+                        }
+                    })
+                } else if (element.indexOf("PROJET DE") > -1) {
+                    let postData3 = element.split(/(?=PROJET DE)/)
+                    postData3.forEach((el, index) => {
+                        laws.content.push(el.split(/(?=PROJET DE)/))
+                    })
+                } else laws.content.push(element)
+            })
+            return laws
+
         })
-        return laws
-    })
-    .then(data => {
+        .then(data => {
+            let laws = {
+                date: data.date,
+                content: []
+            }
+            let tostrEl
+            data.content.forEach((element, index) => {
+                if (Array.isArray(element)) {
+                    tostrEl = element.toString()
+                    laws.content.push(tostrEl)
+                } else {
+                    laws.content.push(element)
+                }
+            })
+            return laws
+        })
+        .then(data => {
             let laws = []
             let law
             data.content.forEach((element, index) => {
@@ -111,16 +126,15 @@ let pdfParsed = new Promise((resolve, reject) => {
                         sanction = "passed"
                     } else if (law.indexOf("pas adopté") > -1) {
                         sanction = "refused"
-                    }
-                    else {
+                    } else {
                         sanction = "unknown"
                     }
                     lawObj = {
-                        date:data.date,
+                        date: data.date,
                         title: title,
                         participants: participantsArr,
                         sanction: sanction,
-                        text:law
+                        text: law
                     }
                     laws.push(lawObj)
 
@@ -129,7 +143,7 @@ let pdfParsed = new Promise((resolve, reject) => {
             return laws
 
         })
-    .then(data => {
+        .then(data => {
             resolve(data)
         })
 

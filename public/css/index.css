@@ -1,0 +1,458 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background: #4c4c4c; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.title-container > i {
+  font-size: 3vw;
+  padding: 5%; }
+
+.title-container {
+  padding: 1% 9%;
+  background: #ffffff85; }
+
+.img-wrapper {
+  width: 100%;
+  height: 36vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position-y: -6vw;
+  background-size: cover;
+  background-image: url(https://cdn.nextgov.com/media/img/upload/2019/10/21/NGelection20191021/860x394.jpg); }
+
+.law-container {
+  width: 86%;
+  background: white;
+  border: solid 1px;
+  margin: 2%;
+  display: flex !important;
+  flex-direction: row-reverse;
+  max-width: 45%;
+  min-height: 40vh; }
+
+.sanction-container {
+  width: 7vh;
+  height: 7vh;
+  position: absolute;
+  z-index: 99;
+  display: inline-flex;
+  border: solid #ce4a4a;
+  margin-left: 42%;
+  margin-top: -2%;
+  background: white;
+  border-radius: 50%; }
+
+.refused > .sanction-container {
+  color: #ce4a4a;
+  border-color: #ce4a4a; }
+
+.passed > .sanction-container {
+  color: #69a268;
+  border-color: #69a268; }
+
+.sanction-container > i {
+  font-size: 3vw;
+  margin: auto; }
+
+.law-title {
+  padding: 1% 3%;
+  color: white;
+  font-size: 18px;
+  text-align: left; }
+
+.passed > .law-title {
+  background-color: #69a268; }
+
+.refused > .law-title {
+  background: #ce4a4a; }
+
+.law-date {
+  text-align: right;
+  font-style: italic;
+  font-weight: 100; }
+
+.sanction-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1% 3%;
+  flex-wrap: wrap;
+  width: 100%; }
+
+.sanction-item > i {
+  font-size: 3vw; }
+
+.sanction-item {
+  display: flex;
+  text-align: center;
+  min-width: 51%; }
+
+#abst-number,
+#pro-number,
+#cons-number,
+#absent-number {
+  font-size: 25px;
+  font-weight: 100; }
+
+i.far.fa-grin-hearts {
+  color: #7dca7b; }
+
+.far.fa-tired {
+  color: #e06565; }
+
+.far.fa-meh-blank {
+  color: #a6a9a1; }
+
+.fas.fa-user-injured {
+  color: #e2891b; }
+
+.more-details {
+  justify-content: flex-end;
+  padding-right: 1%;
+  width: 100%; }
+
+.led-container {
+  justify-content: flex-end;
+  padding: 8px 0px; }
+
+.search-row {
+  margin: 2%; }
+
+.searchbar {
+  float: right;
+  background-color: #eaeaea;
+  color: #292727;
+  padding: 6px 10px;
+  width: 40vw;
+  border: none;
+  margin-top: 1px;
+  margin-right: 8px;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  border-bottom: white solid 2px;
+  transition: 0.3s;
+  border-radius: 30px; }
+
+.searchbar::placeholder {
+  color: #292727;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  /* transition: 0.2s; */ }
+
+.searchbar:focus {
+  width: 80vw;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  transition: 0.7s;
+  /* Stops the input box from inheriting the styling from the inputs on the request form */
+  border-bottom: white solid 2px;
+  outline: none; }
+
+.btn-search {
+  cursor: pointer;
+  color: white;
+  text-decoration: none !important;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  padding-top: 5px;
+  margin-right: 40px; }
+
+.semi-donut {
+  --percentage: 0;
+  --fill: #ff0;
+  width: 300px;
+  height: 150px;
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  overflow: hidden;
+  color: var(--fill);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box; }
+  .semi-donut:after {
+    content: '';
+    width: 300px;
+    height: 300px;
+    border: 50px solid;
+    border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) var(--fill) var(--fill);
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    transform: rotate(calc( 1deg * ( -45 + var(--percentage) * 1.8)));
+    animation: fillAnimation 1s ease-in; }
+
+.semi-donut-model-2 {
+  width: 300px;
+  height: 150px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 150px 150px 0 0;
+  overflow: hidden;
+  color: var(--fill);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box; }
+  .semi-donut-model-2:before, .semi-donut-model-2:after {
+    content: '';
+    width: 300px;
+    height: 150px;
+    border: 50px solid var(--fill);
+    border-top: none;
+    position: absolute;
+    transform-origin: 50% 0% 0;
+    border-radius: 0 0 300px 300px;
+    box-sizing: border-box;
+    left: 0;
+    top: 100%; }
+  .semi-donut-model-2:before {
+    border-color: rgba(0, 0, 0, 0.15);
+    transform: rotate(180deg); }
+  .semi-donut-model-2:after {
+    z-index: 3;
+    animation: 1s fillGraphAnimation ease-in;
+    transform: rotate(calc( 1deg * ( var(--percentage) * 1.8))); }
+  .semi-donut-model-2:hover:after {
+    opacity: .8;
+    cursor: pointer; }
+
+.multi-graph {
+  width: 300px;
+  height: 150px;
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box; }
+  .multi-graph:before {
+    content: '';
+    width: 300px;
+    height: 150px;
+    border: 50px solid rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+    position: absolute;
+    box-sizing: border-box;
+    transform-origin: 50% 0%;
+    border-radius: 300px 300px 0 0;
+    left: 0;
+    top: 0; }
+  .multi-graph .graph {
+    width: 300px;
+    height: 150px;
+    border: 50px solid var(--fill);
+    border-top: none;
+    position: absolute;
+    transform-origin: 50% 0% 0;
+    border-radius: 0 0 300px 300px;
+    left: 0;
+    top: 100%;
+    z-index: 5;
+    animation: 1s fillGraphAnimation ease-in;
+    transform: rotate(calc( 1deg * ( var(--percentage) * 1.8)));
+    box-sizing: border-box;
+    cursor: pointer; }
+    .multi-graph .graph:after {
+      content: attr(data-name) " " counter(varible) "%";
+      counter-reset: varible var(--percentage);
+      background: var(--fill);
+      box-sizing: border-box;
+      border-radius: 2px;
+      color: #fff;
+      font-weight: 200;
+      font-size: 12px;
+      height: 20px;
+      padding: 3px 5px;
+      top: 0px;
+      position: absolute;
+      left: 0;
+      transform: rotate(calc( -1deg * var(--percentage) * 1.8)) translate(-30px, 0px);
+      transition: 0.2s ease-in;
+      transform-origin: 0 50% 0;
+      opacity: 0; }
+    .multi-graph .graph:hover {
+      opacity: 0.8; }
+      .multi-graph .graph:hover:after {
+        opacity: 1;
+        left: 30px; }
+
+@keyframes fillAnimation {
+  0% {
+    transform: rotate(-45deg); }
+  50% {
+    transform: rotate(135deg); } }
+
+@keyframes fillGraphAnimation {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); } }
+
+.led-red {
+  width: 24px;
+  height: 24px;
+  background-color: #F00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+  /*   -webkit-animation: blinkRed 0.5s infinite;
+    -moz-animation: blinkRed 0.5s infinite;
+    -ms-animation: blinkRed 0.5s infinite;
+    -o-animation: blinkRed 0.5s infinite;
+    animation: blinkRed 0.5s infinite; */ }
+
+@-webkit-keyframes blinkRed {
+  from {
+    background-color: #F00; }
+  50% {
+    background-color: #A00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0; }
+  to {
+    background-color: #F00; } }
+
+@-moz-keyframes blinkRed {
+  from {
+    background-color: #F00; }
+  50% {
+    background-color: #A00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0; }
+  to {
+    background-color: #F00; } }
+
+@-ms-keyframes blinkRed {
+  from {
+    background-color: #F00; }
+  50% {
+    background-color: #A00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0; }
+  to {
+    background-color: #F00; } }
+
+@-o-keyframes blinkRed {
+  from {
+    background-color: #F00; }
+  50% {
+    background-color: #A00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0; }
+  to {
+    background-color: #F00; } }
+
+@keyframes blinkRed {
+  from {
+    background-color: #F00; }
+  50% {
+    background-color: #A00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0; }
+  to {
+    background-color: #F00; } }
+
+.led-yellow {
+  width: 24px;
+  height: 24px;
+  background-color: #FF0;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 12px;
+  -webkit-animation: blinkYellow 1s infinite;
+  -moz-animation: blinkYellow 1s infinite;
+  -ms-animation: blinkYellow 1s infinite;
+  -o-animation: blinkYellow 1s infinite;
+  animation: blinkYellow 1s infinite; }
+
+@-webkit-keyframes blinkYellow {
+  from {
+    background-color: #FF0; }
+  50% {
+    background-color: #AA0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+  to {
+    background-color: #FF0; } }
+
+@-moz-keyframes blinkYellow {
+  from {
+    background-color: #FF0; }
+  50% {
+    background-color: #AA0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+  to {
+    background-color: #FF0; } }
+
+@-ms-keyframes blinkYellow {
+  from {
+    background-color: #FF0; }
+  50% {
+    background-color: #AA0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+  to {
+    background-color: #FF0; } }
+
+@-o-keyframes blinkYellow {
+  from {
+    background-color: #FF0; }
+  50% {
+    background-color: #AA0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+  to {
+    background-color: #FF0; } }
+
+@keyframes blinkYellow {
+  from {
+    background-color: #FF0; }
+  50% {
+    background-color: #AA0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+  to {
+    background-color: #FF0; } }
+
+.led-green {
+  width: 24px;
+  height: 24px;
+  background-color: #ABFF00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px; }
+
+.led-blue {
+  width: 24px;
+  height: 24px;
+  background-color: #24E0FF;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #006 0 -1px 9px, #3F8CFF 0 2px 14px; }
